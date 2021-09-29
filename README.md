@@ -1,1 +1,1 @@
-# Untitled Bubble Game (UBG) - This project, which was made as homework for one of the JS marathon lessons
+# Untitled Bubble Game (UBG) is a project created as a homework assignment for one of the JS Marathon lessons.

@@ -1,0 +1,90 @@
+.headline {
+	// If theme isMulti === true
+	// @include theme($themes) {
+	// 	color: get-theme('headlineColor');
+	// }
+	color: $headlineColor;
+
+	font-weight: $headlineWeight;
+	font-size: $headlineSize;
+	font-family: $fontFamilySecondary;
+
+	// < 768px
+	@include media-min(md) {
+		font-size: 36px;
+		line-height: 40px;
+	}
+
+	// < 1200px
+	@include media-min(xl) {
+		font-size: 42px;
+		line-height: 55px;
+	}
+}
+
+.subheading {
+	// If theme isMulti === true
+	// @include theme($themes) {
+	// 	color: get-theme('subheadingColor');
+	// }
+	color: $subheadingColor;
+
+	font-size: $subheadingSize;
+	line-height: $subheadingLineHeight;
+	text-align: center;
+
+	// < 768px
+	@include media-min(md) {
+		font-size: 20px;
+		letter-spacing: 0.025em;
+	}
+
+	// < 1200px
+	@include media-min(xl) {
+		font-size: 24px;
+	}
+}
+
+.title {
+	// If theme isMulti === true
+	// @include theme($themes) {
+	// 	color: get-theme('titleColor');
+	// }
+	color: $titleColor;
+
+	font-weight: $titleWeight;
+	font-size: $titleSize;
+	font-family: $fontFamilySecondary;
+	text-align: center;
+
+	@include media-min(md) {
+		font-size: 18px;
+	}
+
+	@include media-min(xl) {
+		font-size: 20px;
+	}
+}
+
+.subtitle {
+	// If theme isMulti === true
+	// @include theme($themes) {
+	// 	color: get-theme('subtitleColor');
+	// }
+	color: $subtitleColor;
+
+	font-weight: $subtitleWeight;
+	font-size: $subtitleSize;
+	font-family: $fontFamilySecondary;
+	line-height: $subtitleLineHeight;
+}
+
+.text {
+	// @include theme($themes) {
+	// 	color: get-theme('textColor');
+	// }
+	color: $textColor;
+
+	font-size: $textSize;
+	line-height: $textLineHeight;
+}

@@ -1,0 +1,33 @@
+section.game
+	.game__inner.container
+		.screen
+			h1.screen__headline Aim Training
+
+			h3.screen__subheading
+				span.warn Attention! &nbsp
+				| If you don't hit the ball, you will lose
+
+			button.screen__start Start
+
+		.screen
+			h1.screen__headline Choise time
+			ul.time__list
+				li.time__item
+					button.time__btn(data-time='10') 10 Sec
+
+				li.time__item
+					button.time__btn(data-time='20') 20 Sec
+
+				li.time__item
+					button.time__btn(data-time='30') 30 Sec
+
+				li.time__item.field
+					input.time__field(type='number' placeholder='Another... (In seconds)')
+					button.time__field-btn(type='submit')
+		.screen
+			h3.screen__title Time left &nbsp
+				span.screen__timer 00:00
+
+			.screen__board
+			.game-over.hide
+				button.game-over__restart Restart

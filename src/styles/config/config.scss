@@ -26,8 +26,9 @@ body {
 
 body {
 	min-height: 100%;
+	overflow: hidden;
 
-	color: $black;
+	color: $white;
 	font-size: $fontSizePrimary;
 	font-family: $fontFamilyPrimary;
 	line-height: $lineHeightPrimary;
@@ -79,6 +80,8 @@ textarea {
 }
 
 button {
+	color: inherit;
+
 	cursor: pointer;
 
 	&:-moz-focus-inner {

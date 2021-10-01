@@ -1,61 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap');
+// body {
+// 	height: 100vh;
+// 	margin: 0;
+// 	overflow: hidden;
 
-// stylelint-disable
+// 	color: $white;
+// 	font-family: 'Comfortaa', sans-serif;
+// 	text-align: center;
 
-$primary: #f57c00;
-$primaryLight: #ffa726;
+// 	background: #1b1c22;
+// }
 
-$secondary: #9142e0;
-$secondaryLight: #c49aef;
-// stylelint-enable
+// input[type='number']::-webkit-outer-spin-button,
+// input[type='number']::-webkit-inner-spin-button {
+// 	margin: 0;
 
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
+// 	-webkit-appearance: none;
+// }
 
-body {
-	height: 100vh;
-	margin: 0;
-	overflow: hidden;
+// button {
+// 	color: inherit;
 
-	color: $white;
-	font-family: 'Comfortaa', sans-serif;
-	text-align: center;
+// 	border: none;
 
-	background: #1b1c22;
-}
-
-input[type='number']::-webkit-outer-spin-button,
-input[type='number']::-webkit-inner-spin-button {
-	margin: 0;
-
-	-webkit-appearance: none;
-}
-
-button {
-	color: inherit;
-
-	border: none;
-
-	cursor: pointer;
-}
-
-.container {
-	position: relative;
-
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
-}
+// 	cursor: pointer;
+// }
 
 .screen {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 100vw;
 	height: 100vh;
 
 	transition: margin 0.5s ease-out;
@@ -73,7 +47,7 @@ button {
 	&__subheading {
 		margin-bottom: 50px;
 
-		color: $primaryLight;
+		color: $accentLight;
 	}
 
 	&__start {
@@ -138,7 +112,7 @@ button {
 		&:not(:last-child):hover {
 			color: $secondary;
 
-			border: 2px solid $secondary;
+			border: 2px solid $accentLight;
 		}
 	}
 
@@ -154,7 +128,7 @@ button {
 		cursor: pointer;
 
 		&:hover {
-			color: $secondary;
+			color: $accent;
 
 			transition: 0.1s;
 		}
@@ -255,7 +229,7 @@ button {
 }
 
 .warn {
-	color: $primary;
+	color: $accent;
 }
 
 .game-over {
@@ -269,13 +243,13 @@ button {
 		flex-direction: column;
 		margin-bottom: 50px;
 
-		color: $primaryLight;
+		color: $accentLight;
 		font-size: 24px;
 
 		& > span {
 			margin-bottom: 5px;
 
-			color: $primary;
+			color: $accent;
 			font-size: 28px;
 		}
 

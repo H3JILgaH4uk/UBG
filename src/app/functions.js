@@ -22,7 +22,7 @@ export const getInputValue = () => {
 
 	if (value !== 0 && value.length > 0) {
 		vars.inputValue = value;
-		screen[1].classList.add('up');
+		dom.screen[1].classList.add('up');
 	}
 };
 
@@ -52,7 +52,7 @@ export const decTimeInput = () => {
 		dom.restart.classList.remove('hide');
 		gameOver();
 	} else {
-		let value = --inputValue;
+		let value = --vars.inputValue;
 
 		const seconds = value % 60;
 		const secondsInMinutes = (value - seconds) / 60;
@@ -112,15 +112,15 @@ export const gameStartInput = () => {
 	dom.timer.innerHTML = '00:00';
 	dom.timer.parentElement.classList.remove('hide');
 	dom.board.innerHTML = '';
-	isOver = false;
-	interInput = setInterval(decTimeInput, 1000);
+	vars.isOver = false;
+	vars.interInput = setInterval(decTimeInput, 1000);
 	createRndCircle();
 };
 
 // Sets the params when ending the game.
 export const gameEnd = () => {
 	dom.timer.parentElement.classList.add('hide');
-	dom.board.innerHTML = `<h1>Cчёт <span class='primary'>${vars.score}</span></h1>`;
+	dom.board.innerHTML = `<h1>Your score <span class='primary'>${vars.score}</span></h1>`;
 };
 
 // Sets the params if the game over
@@ -128,8 +128,8 @@ export const gameOver = () => {
 	dom.timer.parentElement.classList.add('hide');
 	dom.board.innerHTML = `<h3 class='game-over__message'>
 							<span>Fail (ノಠ益ಠ)ノ彡┻━┻</span>
-							<p>You lose :(p>
-							<p>Your count: <span>${vars.score}</span></p>
+							<p>You lose :(<p>
+							<p>Your score: <span>${vars.score}</span></p>
 						</h3>`;
 	clearInterval(vars.inter);
 	clearInterval(vars.interInput);

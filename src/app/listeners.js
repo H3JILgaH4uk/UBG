@@ -1,5 +1,5 @@
 import dom, { vars } from './config';
-import { gameStart, createRndCircle } from './functions';
+import { gameStart, gameStartInput, createRndCircle, getInputValue } from './functions';
 
 dom.btn.time.addEventListener('click', () => {
 	getInputValue();

@@ -6,7 +6,7 @@ import vinylBuffer from 'vinyl-buffer';
 import sourcemaps from 'gulp-sourcemaps';
 import uglify from 'gulp-uglify';
 import gulpif from 'gulp-if';
-import path from '../config.js';
+import { path } from '../../config.js';
 
 export const appBuild = () =>
 	browserify(path.app.src, { debug: true })

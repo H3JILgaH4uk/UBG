@@ -1,4 +1,4 @@
-import { task } from '../../config.js';
+import { task } from '../config.js';
 import { viewsBuild, viewsWatch } from './views.js';
 import { stylesBuild, stylesWatch } from './styles.js';
 import { appBuild, appWatch } from './app.js';
@@ -7,25 +7,9 @@ import { imagesBuild, imagesWatch } from './images.js';
 import { spritesBuild, spritesWatch } from './sprites.js';
 import { faviconBuild, faviconWatch } from './favicon.js';
 
-const builds = [
-	viewsBuild,
-	stylesBuild,
-	appBuild,
-	fontsBuild,
-	imagesBuild,
-	spritesBuild,
-	faviconBuild
-];
+const builds = [viewsBuild, stylesBuild, appBuild, fontsBuild, imagesBuild, spritesBuild, faviconBuild];
 
-const watchers = [
-	viewsWatch,
-	stylesWatch,
-	appWatch,
-	fontsWatch,
-	imagesWatch,
-	spritesWatch,
-	faviconWatch
-];
+const watchers = [viewsWatch, stylesWatch, appWatch, fontsWatch, imagesWatch, spritesWatch, faviconWatch];
 
 if (task.favicon === false) {
 	builds.splice(6, 1);
